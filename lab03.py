@@ -8,7 +8,14 @@ weapons = ['Fist', 'Knife', 'Club', 'Gun', 'Bomb', 'Nuclear Bomb']
 
 print("Available Weapons:", ', '.join(weapons))
 
-# User inputs
+# User inputs 
+combatStrength = int(input("Enter your combat strength (1-6): "))
+if combatStrength < 1 or combatStrength > 6:
+    print("Invalid input please enter number from (1-6)")
+
+    # Default value for invalid input
+    combatStrength = 1
+
 combatStrength = max(1, min(6, int(input("Hero strength (1-6): "))))
 mCombatStrength = max(1, min(6, int(input("Monster strength (1-6): "))))
 
